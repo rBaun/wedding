@@ -1,0 +1,105 @@
+{
+  "pages": {
+    "invite": {
+      "description": "Du er inviteret til vores bryllup – en dag fyldt med kærlighed, nærvær og fejring. Vi glæder os til at dele denne helt særlige dag med familie og venner.",
+      "invitations": {
+        "church": {
+          "label": "Vielsen",
+          "location": {
+            "name": "Saltum Kirke",
+            "address": "Tinghøjgade 83, 9493 Saltum"
+          },
+          "time": {
+            "arrival": {
+              "label": "Ankomst",
+              "start": "12:30"
+            },
+            "ceremony": {
+              "label": "Vielse",
+              "start": "13:00"
+            }
+          }
+        },
+        "hotel": {
+          "label": "Reception & Bryllupsfest",
+          "location": {
+            "name": "Scheelsminde Hotel",
+            "address": "Scheelsmindevej 35, 9000 Aalborg"
+          },
+          "time": {
+            "reception": {
+              "label": "Reception",
+              "start": "15:30",
+              "end": "17:30"
+            },
+            "party": {
+              "label": "Bryllupsfest",
+              "start": "17:30",
+              "end": "03:00"
+            }
+          }
+        }
+      },
+      "rsvp": "Tilmeld dig"
+    },
+    "rsvp": {
+      "title": {
+        "plural": "Fortæl os om I kommer",
+        "singular": "Fortæl os om du kommer"
+      },
+      "deadline": "S.U. 07.03.26",
+      "description": {
+        "plural": "Vi håber I vil fejre dagen sammen med os! Når først I har sendt jeres svar, så vil I ikke kunne se denne side igen.",
+        "singular": "Vi håber du vil fejre dagen sammen med os! Når først du har sendt dit svar, så vil du ikke kunne se denne side igen."
+      },
+      "inputs": {
+        "notes": {
+          "placeholder": "Skriv allergier eller særlige hensyn ind her",
+          "label": "Særlige hensyn"
+        }
+      },
+      "submit": "Send svar"
+    },
+    "info": {
+      "title": "Praktisk Information",
+      "description": "Vi har samlet lidt praktiske informationer her. Tryk på en sektion for at folde den ud og læse mere.",
+      "topics": {
+        "booking": {
+          "title": "Overnatning",
+          "expanded": {
+            "line1": "Vi har lavet en aftale med Scheelsminde, hvor der kan bookes hotelværelser til en fordelagtigt pris.",
+            "line2": "Følgende rabatkode kan tages i brug for at sparer XX%: ",
+            "discountCode": "RUNIKO2026",
+            "line3": "Tryk på linket for at komme til Scheelsminde's hjemmeside."
+          }
+        },
+        "wishlist": {
+          "title": "Ønskeliste",
+          "description": "Klik her for at gå til ",
+          "linkLabel": "Ønskeskyen"
+        },
+        "route": {
+          "title": "Find vej & Parkering",
+          "path": {
+            "line1": "Vi har gjort det nemt for dig at finde vej. Tryk på linket til kirken eller hotellet for at åbne maps med den rigtige addresse."
+          },
+          "parking": {
+            "line2": "Vi gør opmærksom på at det er i konfirmationsperioden og at der vil være flere selskaber til konfirmation. Vi forventer at der vil være rift om pladserne, men at det tømmer ud senere på dagen."
+          }
+        },
+        "toastmaster": {
+          "title": "Kontakt toastmaster",
+          "description": "Tag fat i vores toastmaster, hvis I ønsker at få taletid eller andet under bryllupsfesten.",
+          "contact": {
+            "name": "Camilla Wedenfelt",
+            "mail": "cwf@hotmail.com",
+            "facebook": "Idk"
+          }
+        },
+        "timeline": {
+          "title": "Dagens program"
+        }
+      }
+    }
+  }
+}

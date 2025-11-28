@@ -1,0 +1,95 @@
+<div class="info-container">
+  <div class="intro">
+    <h2 class="title">{{ "pages.info.title" | transloco }}</h2>
+    <p class="description">{{ "pages.info.description" | transloco }}</p>
+  </div>
+
+  <div class="topics">
+    <!-- Booking -->
+    <app-accordion-card [title]="'pages.info.topics.booking.title' | transloco">
+      <div accordion-content>
+        <p class="expanded-text">
+          {{ "pages.info.topics.booking.expanded.line1" | transloco }}
+        </p>
+        <p class="expanded-text">
+          {{ "pages.info.topics.booking.expanded.line2" | transloco }}
+        </p>
+        <p class="discount-code">
+          {{ "pages.info.topics.booking.expanded.discountCode" | transloco }}
+        </p>
+        <p class="expanded-text">
+          {{ "pages.info.topics.booking.expanded.line3" | transloco }}
+        </p>
+        <a
+          class="booking-link"
+          href="https://scheelsminde.dk/vaerelser/"
+          target="_blank"
+          >Book et værelse her</a
+        >
+      </div>
+    </app-accordion-card>
+
+    <!-- Wishlist -->
+    <app-accordion-card
+      [title]="'pages.info.topics.wishlist.title' | transloco"
+    >
+      <div accordion-content>
+        <p class="expanded-text">
+          {{ "pages.info.topics.wishlist.description" | transloco }}
+          <a href="https://ønskeskyen.dk">{{
+            "pages.info.topics.wishlist.linkLabel" | transloco
+          }}</a>
+        </p>
+      </div>
+    </app-accordion-card>
+
+    <!-- Route -->
+    <app-accordion-card [title]="'pages.info.topics.route.title' | transloco">
+      <div accordion-content>
+        <p class="expanded-text">
+          {{ "pages.info.topics.route.path.line1" | transloco }}
+        </p>
+        <ul>
+          <li>
+            <a href="https://maps.app.goo.gl/vebjt14E8qsjBX5L6" target="_blank"
+              >Vis vej til Saltum Kirke</a
+            >
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/Kq7xmj49Sg7R43Tz5" target="_blank"
+              >Vis vej til Scheelsminde Hotel</a
+            >
+          </li>
+        </ul>
+        <p class="expanded-text">
+          {{ "pages.info.topics.route.parking.line2" | transloco }}
+        </p>
+      </div>
+    </app-accordion-card>
+
+    <!-- Toastmaster -->
+    <app-accordion-card
+      [title]="'pages.info.topics.toastmaster.title' | transloco"
+    >
+      <div accordion-content>
+        <p class="expanded-text">
+          {{ "pages.info.topics.toastmaster.description" | transloco }}
+        </p>
+
+        <div class="toastmaster-contact-info">
+          <p>{{ "pages.info.topics.toastmaster.contact.name" | transloco }}</p>
+          <p>{{ "pages.info.topics.toastmaster.contact.mail" | transloco }}</p>
+          <p>
+            {{ "pages.info.topics.toastmaster.contact.facebook" | transloco }}
+          </p>
+        </div>
+      </div>
+    </app-accordion-card>
+
+    <app-accordion-card
+      [title]="'pages.info.topics.timeline.title' | transloco"
+    >
+      <div accordion-content></div>
+    </app-accordion-card>
+  </div>
+</div>

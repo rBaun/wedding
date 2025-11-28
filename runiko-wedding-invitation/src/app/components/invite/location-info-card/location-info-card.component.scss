@@ -1,0 +1,71 @@
+.location-info-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .25rem;
+
+  padding: 1rem .5rem;
+  background-color: var(--color-white);
+  border-radius: 10px;
+
+  border: 1px solid #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      text-align: left;
+      color: var(--color-green);
+      font-size: 1.5rem;
+    }
+
+    .google-maps-link {
+      color: var(--color-green);
+      font-size: 1.5rem;
+    }
+  }
+
+  .location-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+
+    padding: .25rem 0;
+
+    .location-name {
+      font-weight: bold;
+    }
+
+    .location-address {
+      font-size: .75rem;
+    }
+  }
+
+  .time-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .event-label {
+      font-family: var(--font-family-numbers);
+      font-size: .85rem;
+    }
+
+    .event-timing {
+      display: flex;
+      flex-direction: row;
+      gap: .5rem;
+
+      .time {
+        font-family: var(--font-family-numbers);
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

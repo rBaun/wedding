@@ -1,0 +1,24 @@
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  background-color: var(--color-white-dark);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+  .portrait {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border: 2px solid var(--color-green);
+  }
+
+  .title {
+    max-height: 96px;
+  }
+
+}

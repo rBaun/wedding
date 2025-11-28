@@ -1,0 +1,15 @@
+.invite-container {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-white-dark);
+
+  .invitation-text {
+    padding: 0 1rem;
+    border-radius: 10px;
+  }
+
+  .next-btn-wrapper {
+    padding: 0 1rem;
+  }
+}

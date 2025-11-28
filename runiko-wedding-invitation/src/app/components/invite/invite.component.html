@@ -1,0 +1,16 @@
+<div class="invite-container">
+  <app-image-portrait class="portrait-img"></app-image-portrait>
+
+  <p class="invitation-text">
+    {{ "pages.invite.description" | transloco }}
+  </p>
+
+  <app-location-info></app-location-info>
+
+  <div class="next-btn-wrapper">
+    <app-button-next
+      [label]="'pages.invite.rsvp' | transloco"
+      (click)="onRsvpButtonClick()"
+    ></app-button-next>
+  </div>
+</div>

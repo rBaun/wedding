@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="da">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Nikoline & Runes Bryllup</title>
+
+		<!-- Script-font til overskrifter -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+			rel="stylesheet" />
+
+		<style>
+			:root {
+				--brand-green: #114b3f;
+				--brand-white: #ffffff;
+				--text-muted: #606060;
+			}
+
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+				background: var(--brand-white);
+				color: #333;
+			}
+
+			.container {
+				max-width: 430px;
+				margin: 0 auto;
+				padding: 16px;
+			}
+
+			header {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				margin-bottom: 24px;
+			}
+
+			header h1 {
+				font-family: 'Parisienne', cursive;
+				color: var(--brand-green);
+				margin: 0;
+				font-size: 28px;
+			}
+
+			header img {
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				object-fit: cover;
+				/* filter: grayscale(100%); */
+				border: 2px solid var(--brand-green);
+			}
+
+			h2 {
+				margin: 0 0 8px;
+				font-size: 20px;
+			}
+
+			.card {
+				background: #fff;
+				padding: 18px;
+				border-radius: 12px;
+				box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+				margin-bottom: 20px;
+			}
+
+			.hero img {
+				width: 100%;
+				height: 180px;
+				object-fit: cover;
+				/* filter: grayscale(100%); */
+				border-radius: 8px;
+			}
+
+			.info-row {
+				display: flex;
+				justify-content: space-between;
+				font-size: 14px;
+				margin: 6px 0;
+			}
+
+			.button {
+				display: block;
+				width: 100%;
+				padding: 12px;
+				background: var(--brand-green);
+				color: white;
+				border: none;
+				border-radius: 8px;
+				font-size: 15px;
+				cursor: pointer;
+				margin-top: 12px;
+			}
+
+			.button-outline {
+				background: none;
+				border: 1px solid var(--brand-green);
+				color: var(--brand-green);
+			}
+
+			/* Accordion */
+			.accordion-item {
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				margin-bottom: 10px;
+				overflow: hidden;
+			}
+
+			.accordion-header {
+				padding: 12px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				cursor: pointer;
+				background: #fff;
+			}
+
+			.accordion-content {
+				padding: 12px;
+				display: none;
+				background: #fff;
+				border-top: 1px solid #eee;
+				font-size: 14px;
+			}
+
+			.footer {
+				text-align: center;
+				font-size: 12px;
+				color: #999;
+				margin-top: 16px;
+			}
+		</style>
+
+		<script>
+			// Simple page navigation and accordion logic
+			function showPage(p) {
+				document
+					.querySelectorAll('.page')
+					.forEach((pg) => (pg.style.display = 'none'));
+				document.getElementById('page' + p).style.display = 'block';
+			}
+
+			function toggleAccordion(id) {
+				const el = document.getElementById(id);
+				el.style.display = el.style.display === 'block' ? 'none' : 'block';
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header shared on all pages -->
+			<header>
+				<img
+					src="portrait.jpg"
+					alt="" />
+				<div>
+					<h1>Nikoline & Rune</h1>
+					<small>09.05.2025</small>
+				</div>
+			</header>
+
+			<!-- PAGE 1: Forside -->
+			<div
+				id="page1"
+				class="page"
+				style="display: block">
+				<div class="card">
+					<div class="hero">
+						<img
+							src="portrait.jpg"
+							alt="Hero" />
+					</div>
+
+					<h2>Velkommen</h2>
+					<p style="font-size: 14px; color: var(--text-muted)">
+						Vi glæder os til at fejre vores bryllup d.
+						<strong>09.05.2025</strong>. Her kan du se tid & sted.
+					</p>
+
+					<div class="info-row">
+						<strong>Vielse</strong>
+						<span>Kl. 14:00 — [Kirke]</span>
+					</div>
+					<div class="info-row">
+						<strong>Reception</strong>
+						<span>Kl. 16:00 — [Sted]</span>
+					</div>
+					<div class="info-row">
+						<strong>Fest</strong>
+						<span>Kl. 18:00 — [Sted]</span>
+					</div>
+
+					<button
+						class="button"
+						onclick="showPage(2)">
+						Tilmeld dig
+					</button>
+				</div>
+			</div>
+
+			<!-- PAGE 2: Tilmelding -->
+			<div
+				id="page2"
+				class="page"
+				style="display: none">
+				<div class="card">
+					<h2>Tilmelding</h2>
+					<p style="font-size: 14px; color: var(--text-muted)">
+						Afkryds hvem der deltager i festen.
+					</p>
+
+					<label style="font-size: 13px; margin-top: 8px; display: block">
+						Husstandens navn:
+					</label>
+					<input
+						type="text"
+						style="
+							width: 100%;
+							padding: 8px;
+							margin-bottom: 12px;
+							border-radius: 6px;
+							border: 1px solid #ccc;
+						" />
+
+					<fieldset
+						style="padding: 8px; border-radius: 6px; border: 1px solid #ccc">
+						<legend style="font-size: 14px; font-weight: bold">Personer</legend>
+
+						<label><input type="checkbox" /> Person 1</label><br />
+						<label><input type="checkbox" /> Person 2</label><br />
+						<label><input type="checkbox" /> Person 3</label><br />
+						<label><input type="checkbox" /> Person 4</label><br />
+					</fieldset>
+
+					<div style="display: flex; gap: 8px; margin-top: 12px">
+						<button
+							class="button button-outline"
+							onclick="showPage(1)">
+							Tilbage
+						</button>
+						<button
+							class="button"
+							onclick="showPage(3)">
+							Send
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- PAGE 3: Hurtige links -->
+			<div
+				id="page3"
+				class="page"
+				style="display: none">
+				<div class="card">
+					<h2>Tak – Hurtige links</h2>
+					<p style="font-size: 14px; color: var(--text-muted)">
+						Klik for at folde ud.
+					</p>
+
+					<!-- Accordion 1 -->
+					<div class="accordion-item">
+						<div
+							class="accordion-header"
+							onclick="toggleAccordion('acc1')">
+							Ønskeliste
+						</div>
+						<div
+							class="accordion-content"
+							id="acc1">
+							<p>Se ønskelisten hos [butik].</p>
+						</div>
+					</div>
+
+					<!-- Accordion 2 -->
+					<div class="accordion-item">
+						<div
+							class="accordion-header"
+							onclick="toggleAccordion('acc2')">
+							Find vej & parkering
+						</div>
+						<div
+							class="accordion-content"
+							id="acc2">
+							<p>Her er kort og info.</p>
+						</div>
+					</div>
+
+					<!-- Accordion 3 -->
+					<div class="accordion-item">
+						<div
+							class="accordion-header"
+							onclick="toggleAccordion('acc3')">
+							Kontakt toastmaster
+						</div>
+						<div
+							class="accordion-content"
+							id="acc3">
+							<p>Morten – 12 34 56 78</p>
+						</div>
+					</div>
+
+					<!-- Hotelkode -->
+					<div
+						style="
+							background: #f6f6f6;
+							padding: 12px;
+							border-radius: 8px;
+							margin-top: 12px;
+						">
+						<strong>Rabatkode – Hotel</strong><br />
+						<span style="letter-spacing: 2px">BRYLLUP2025</span>
+					</div>
+
+					<div style="display: flex; gap: 8px; margin-top: 12px">
+						<button
+							class="button button-outline"
+							onclick="showPage(1)">
+							Forside
+						</button>
+						<button
+							class="button"
+							onclick="showPage(2)">
+							Ændre tilmelding
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">© Nikoline & Rune – 09.05.2025</div>
+		</div>
+	</body>
+</html>

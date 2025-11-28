@@ -1,0 +1,9 @@
+.location-info-container {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-white-dark);
+
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}

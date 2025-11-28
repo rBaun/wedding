@@ -1,0 +1,22 @@
+<div class="location-info-card-container">
+  <div class="header">
+    <h2 class="title">{{ this.venueInfo.title }}</h2>
+    <p class="google-maps-link">^></p>
+  </div>
+  <div class="location-details">
+    <p class="location-name">{{ this.venueInfo.location.name }}</p>
+    <p class="location-address">{{ this.venueInfo.location.address }}</p>
+  </div>
+
+  @for (item of this.venueInfo.event; track $index) {
+    <div class="time-details">
+      <p class="event-label">{{ item.label }}</p>
+      <div class="event-timing">
+        <p class="time">{{ item.startTime }}</p>
+        @if (item.endTime) {
+          <p class="time">{{ ` - ${item.endTime}` }}</p>
+        }
+      </div>
+    </div>
+  }
+</div>

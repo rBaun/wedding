@@ -1,0 +1,16 @@
+.btn-container {
+  padding: 1rem .5rem;
+  background-color: var(--color-white-dark);
+
+  .btn-next {
+    width: 100%;
+    padding: 1rem .5rem;
+
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-size: 1.25rem;
+
+    border: 1px solid #2d7b1f;
+    border-radius: .5rem;
+  }
+}

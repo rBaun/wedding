@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="da">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Nikoline & Rune – Bryllup 2025</title>
+
+		<!-- Script font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+			rel="stylesheet" />
+
+		<style>
+			:root {
+				--brand-green: #114b3f;
+				--brand-white: #ffffff;
+				--text-muted: #606060;
+			}
+
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+				background: var(--brand-white);
+				color: #333;
+			}
+
+			.container {
+				max-width: 430px;
+				margin: 0 auto;
+				padding: 16px;
+			}
+
+			/* --- HEADER --- */
+			header {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				margin: 16px 0 24px;
+			}
+
+			header img {
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				object-fit: cover;
+				filter: grayscale(100%);
+				border: 2px solid var(--brand-green);
+			}
+
+			header h1 {
+				font-family: 'Parisienne', cursive;
+				color: var(--brand-green);
+				margin: 0;
+				font-size: 28px;
+				line-height: 1.1;
+			}
+
+			header small {
+				margin-top: 4px;
+				font-size: 13px;
+				display: block;
+				color: var(--text-muted);
+			}
+
+			/* --- HERO --- */
+			.hero {
+				position: relative;
+				height: 240px;
+				border-radius: 10px;
+				overflow: hidden;
+				margin-bottom: 24px;
+			}
+
+			.hero img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				filter: grayscale(100%) brightness(70%);
+			}
+
+			.hero-text {
+				position: absolute;
+				bottom: 16px;
+				left: 16px;
+				color: white;
+			}
+
+			.hero-text h2 {
+				font-family: 'Parisienne', cursive;
+				margin: 0;
+				font-size: 32px;
+			}
+
+			.hero-text p {
+				margin: 4px 0 0;
+				font-size: 14px;
+			}
+
+			/* --- SECTIONS --- */
+			.lead {
+				font-size: 15px;
+				margin-bottom: 16px;
+			}
+
+			.card {
+				background: #fff;
+				padding: 16px;
+				border-radius: 12px;
+				margin-bottom: 16px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+			}
+
+			.card h3 {
+				margin: 0 0 8px;
+				font-size: 18px;
+				color: var(--brand-green);
+			}
+
+			.card p {
+				margin: 6px 0;
+				font-size: 14px;
+			}
+
+			.button {
+				display: block;
+				width: 100%;
+				padding: 12px;
+				background: var(--brand-green);
+				color: white;
+				border: none;
+				border-radius: 8px;
+				font-size: 15px;
+				text-align: center;
+				margin-top: 12px;
+				cursor: pointer;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- HEADER (brought back) -->
+			<header>
+				<img
+					src="portrait.jpg"
+					alt="Portræt" />
+				<div>
+					<h1>Nikoline & Rune</h1>
+					<small>09.05.2025</small>
+				</div>
+			</header>
+
+			<!-- HERO BANNER -->
+			<section class="hero">
+				<img
+					src="portrait.jpg"
+					alt="Hero foto" />
+				<div class="hero-text">
+					<h2>Nikoline & Rune</h2>
+					<p>Vi skal giftes! – 9. maj 2025</p>
+				</div>
+			</section>
+
+			<!-- INTRO -->
+			<p class="lead">
+				Du er inviteret til vores bryllup – en dag fyldt med kærlighed, nærvær
+				og fejring. Vi glæder os til at dele denne helt særlige dag med familie
+				og venner.
+			</p>
+
+			<!-- Kirke sektion -->
+			<div class="card">
+				<h3>Vielsen – Saltum Kirke</h3>
+				<p><strong>Adresse:</strong> Tinghøjgade 83, 9493 Saltum</p>
+				<p><strong>Ankomst:</strong> Fra kl. 12.30</p>
+				<p><strong>Vielse:</strong> Starter kl. 13.00</p>
+			</div>
+
+			<!-- Fest sektion -->
+			<div class="card">
+				<h3>Reception & Bryllupsfest – Scheelsminde</h3>
+				<p><strong>Adresse:</strong> Scheelsmindevej 35</p>
+				<p><strong>Reception:</strong> Efter vielsen</p>
+				<p><strong>Bryllupsfest:</strong> Fortsætter her til sent</p>
+			</div>
+
+			<!-- CTA -->
+			<a
+				class="button"
+				href="./signup.html">
+				Tilmeld dig
+			</a>
+		</div>
+	</body>
+</html>

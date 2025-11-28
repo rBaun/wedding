@@ -1,0 +1,32 @@
+.info-container {
+
+  height: calc(100% - 96px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: var(--color-white-dark);
+  padding: .5rem 1rem;
+
+  .intro {
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .description {}
+  }
+
+  .topics {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .expanded-text {}
+  }
+}

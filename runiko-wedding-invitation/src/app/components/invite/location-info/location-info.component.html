@@ -1,0 +1,6 @@
+@if (churchInfo && hotelInfo) {
+  <div class="location-info-container">
+    <app-location-info-card [venueInfo]="churchInfo"></app-location-info-card>
+    <app-location-info-card [venueInfo]="hotelInfo"></app-location-info-card>
+  </div>
+}

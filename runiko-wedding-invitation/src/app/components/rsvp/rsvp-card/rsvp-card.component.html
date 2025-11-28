@@ -1,0 +1,16 @@
+<div class="rsvp-card-container">
+  <div class="rsvp-card-header">
+    <h3 class="title">{{ this.guest.name }}</h3>
+    <label for="attendance" class="attendance-label">
+      <input class="attendance" type="checkbox" name="attendance" />
+    </label>
+  </div>
+  <label for="notes" class="notes">
+    <p>{{ "pages.rsvp.inputs.notes.label" | transloco }}</p>
+    <textarea
+      name="notes"
+      id="notes"
+      [placeholder]="'pages.rsvp.inputs.notes.placeholder' | transloco"
+    ></textarea>
+  </label>
+</div>
