@@ -1,3 +1,5 @@
+src/app/data/secret-cache.ts
+
 # Angular specific
 /dist/
 /out-tsc/
