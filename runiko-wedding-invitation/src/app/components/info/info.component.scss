@@ -28,5 +28,61 @@
     gap: 1rem;
 
     .expanded-text {}
+
+    .discount-code {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+
+      padding: 0 1rem;
+      background-color: var(--color-green-light);
+      border: 1px dashed var(--color-green-dark);
+      border-radius: 8px;
+
+      .code {
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+
+      .copy-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        i {
+          font-size: 1.25rem;
+          color: var(--color-green-dark);
+        }
+      }
+    }
+
+    .link-with-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: .5rem;
+
+      color: var(--color-green-dark);
+      text-decoration: none;
+
+      i {
+        font-size: 1.25rem;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .route-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .toastmaster-contact-info {
+      padding-top: 1rem;
+    }
   }
 }
