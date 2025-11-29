@@ -26,10 +26,13 @@
       }
     </div>
 
-    <app-button-next
-      class="submit-button"
-      [label]="'pages.rsvp.submit' | transloco"
-      (click)="onSubmitClick()"
-    ></app-button-next>
+    <div class="button-container">
+      <app-button-back [navigateTo]="'/invite'"></app-button-back>
+      <app-button-next
+        class="submit-button"
+        [label]="'pages.rsvp.submit' | transloco"
+        (click)="onSubmitClick()"
+      ></app-button-next>
+    </div>
   }
 </div>

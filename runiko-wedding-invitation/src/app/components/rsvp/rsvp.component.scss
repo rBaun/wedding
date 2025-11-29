@@ -31,7 +31,14 @@
     flex: 1;
   }
 
-  .submit-button {
-    align-items: end;
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    .submit-button {
+      flex: 1;
+    }
   }
 }

@@ -7,10 +7,12 @@
 
   <app-location-info></app-location-info>
 
-  <div class="next-btn-wrapper">
-    <app-button-next
-      [label]="'pages.invite.rsvp' | transloco"
-      (click)="onRsvpButtonClick()"
-    ></app-button-next>
-  </div>
+  @if (this.isInvited) {
+    <div class="next-btn-wrapper">
+      <app-button-next
+        [label]="'pages.invite.rsvp' | transloco"
+        (click)="onRsvpButtonClick()"
+      ></app-button-next>
+    </div>
+  }
 </div>
