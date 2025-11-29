@@ -14,9 +14,14 @@
         <p class="expanded-text">
           {{ "pages.info.topics.booking.expanded.line2" | transloco }}
         </p>
-        <p class="discount-code">
-          {{ "pages.info.topics.booking.expanded.discountCode" | transloco }}
-        </p>
+        <div class="discount-code">
+          <p class="code">
+            {{ "pages.info.topics.booking.expanded.discountCode" | transloco }}
+          </p>
+          <button class="copy-button" (click)="onCopyDiscountCode()">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
         <p class="expanded-text">
           {{ "pages.info.topics.booking.expanded.line3" | transloco }}
         </p>
@@ -36,10 +41,11 @@
       <div accordion-content>
         <p class="expanded-text">
           {{ "pages.info.topics.wishlist.description" | transloco }}
-          <a href="https://ønskeskyen.dk">{{
-            "pages.info.topics.wishlist.linkLabel" | transloco
-          }}</a>
         </p>
+        <a class="link-with-icon" href="https://ønskeskyen.dk" target="_blank">
+          <i class="fa-solid fa-cloud"></i>
+          {{ "pages.info.topics.wishlist.linkLabel" | transloco }}
+        </a>
       </div>
     </app-accordion-card>
 
@@ -49,18 +55,19 @@
         <p class="expanded-text">
           {{ "pages.info.topics.route.path.line1" | transloco }}
         </p>
-        <ul>
-          <li>
-            <a href="https://maps.app.goo.gl/vebjt14E8qsjBX5L6" target="_blank"
-              >Vis vej til Saltum Kirke</a
-            >
-          </li>
-          <li>
-            <a href="https://maps.app.goo.gl/Kq7xmj49Sg7R43Tz5" target="_blank"
-              >Vis vej til Scheelsminde Hotel</a
-            >
-          </li>
-        </ul>
+        <div class="route-links">
+          <a class="link-with-icon" href="https://maps.app.goo.gl/vebjt14E8qsjBX5L6" target="_blank">
+            <i class="fa-solid fa-church"></i>
+            Vis vej til Saltum Kirke
+          </a>
+          <a class="link-with-icon" href="https://maps.app.goo.gl/Kq7xmj49Sg7R43Tz5" target="_blank">
+            <i class="fa-solid fa-hotel"></i>
+            Vis vej til Scheelsminde Hotel
+          </a>
+        </div>
+        <p class="expanded-text">
+          {{ "pages.info.topics.route.parking.line1" | transloco }}
+        </p>
         <p class="expanded-text">
           {{ "pages.info.topics.route.parking.line2" | transloco }}
         </p>
@@ -75,12 +82,26 @@
         <p class="expanded-text">
           {{ "pages.info.topics.toastmaster.description" | transloco }}
         </p>
+        <p class="expanded-text">
+          {{ "pages.info.topics.toastmaster.description2" | transloco }}
+        </p>
 
         <div class="toastmaster-contact-info">
-          <p>{{ "pages.info.topics.toastmaster.contact.name" | transloco }}</p>
-          <p>{{ "pages.info.topics.toastmaster.contact.mail" | transloco }}</p>
           <p>
-            {{ "pages.info.topics.toastmaster.contact.facebook" | transloco }}
+            <b>{{
+              "pages.info.topics.toastmaster.contact.name" | transloco
+            }}</b>
+          </p>
+          <p>
+            <a
+              class="link-with-icon"
+              href="mailto:{{
+                'pages.info.topics.toastmaster.contact.mail' | transloco
+              }}"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              {{ "pages.info.topics.toastmaster.contact.mail" | transloco }}
+            </a>
           </p>
         </div>
       </div>
