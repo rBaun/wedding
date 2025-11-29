@@ -1,23 +1,20 @@
-import { Component } from '@angular/core';
-import { TranslocoModule } from '@jsverse/transloco';
+import { Component, inject } from '@angular/core';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { AccordionCardComponent } from "./accordion-card/accordion-card.component";
+import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-info',
-  imports: [TranslocoModule, AccordionCardComponent],
+  imports: [TranslocoModule, AccordionCardComponent, ClipboardModule],
   templateUrl: './info.component.html',
   styleUrl: './info.component.scss'
 })
 export class InfoComponent {
+  private readonly clipboard = inject(Clipboard);
+  private readonly translocoService = inject(TranslocoService);
 
-  protected expanded = new Set<string>();
-
-  protected onAccordionClick = (accordionId: string) => {
-    if (this.expanded.has(accordionId)) {
-      this.expanded.delete(accordionId);
-    } else {
-      this.expanded.add(accordionId);
-    }
+  protected onCopyDiscountCode = () => {
+    const discountCode = this.translocoService.translate('pages.info.topics.booking.expanded.discountCode');
+    this.clipboard.copy(discountCode);
   }
-
 }
