@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-banner-header-details',
@@ -7,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrl: './banner-header-details.component.scss'
 })
 export class BannerHeaderDetailsComponent {
+
+  constructor(
+    private router: Router
+  ) { }
+
+  protected onPortraitImageClick = (): void => {
+    this.goToHomePage();
+  };
+
+  protected onTitleClick = (): void => {
+    this.goToHomePage();
+  }
+
+  private goToHomePage = (): Promise<boolean> => this.router.navigateByUrl('invite');
 
 }
