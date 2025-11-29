@@ -4,13 +4,12 @@
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 
   background-color: var(--color-white-dark);
-  padding: .5rem 1rem;
+  // padding: .5rem 1rem;
 
   .intro {
-    padding: .5rem 0;
+    padding: .5rem 1rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -27,32 +26,57 @@
     flex-direction: column;
     gap: 1rem;
 
-    .expanded-text {}
+    flex: 1;
 
-    .discount-code {
+    padding: 1rem;
+    background-color: var(--color-white-dark);
+
+    .expanded-text {
+
+      .discount-percentage {
+        font-weight: bolder;
+        color: var(--color-green);
+      }
+    }
+
+    .copy-discount-code-wrapper {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       align-items: center;
-      gap: 1rem;
 
-      padding: 0 1rem;
-      background-color: var(--color-green-light);
-      border: 1px dashed var(--color-green-dark);
-      border-radius: 8px;
+      width: 100%;
+      padding: 1rem;
 
-      .code {
-        font-weight: 500;
-        font-size: 1.5rem;
-      }
+      .discount-code {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
 
-      .copy-button {
-        background: none;
-        border: none;
-        cursor: pointer;
+        padding: .75rem;
+        background-color: var(--color-white-dark);
+        border: 1px dashed var(--color-green);
+        border-radius: 8px;
 
-        i {
-          font-size: 1.25rem;
-          color: var(--color-green-dark);
+        width: 75%;
+
+        .code {
+          font-weight: 500;
+          font-size: 1.5rem;
+          color: var(--color-green);
+        }
+
+        .copy-button {
+          background: none;
+          border: none;
+          cursor: pointer;
+
+          i {
+            font-size: 1.75rem;
+            color: var(--color-green);
+          }
         }
       }
     }
@@ -63,15 +87,12 @@
       align-items: center;
       gap: .5rem;
 
-      color: var(--color-green-dark);
       text-decoration: none;
+      color: black;
 
       i {
-        font-size: 1.25rem;
-      }
-
-      &:hover {
-        text-decoration: underline;
+        color: var(--color-green);
+        font-size: 2rem;
       }
     }
 
@@ -79,6 +100,11 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      padding: 0 0 2rem 0;
+    }
+
+    .parking-info {
+      font-size: .90rem;
     }
 
     .toastmaster-contact-info {

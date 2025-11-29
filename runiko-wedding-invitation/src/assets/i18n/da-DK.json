@@ -40,7 +40,8 @@
           }
         }
       },
-      "rsvp": "Tilmeld dig"
+      "rsvp": "Tilmeld dig",
+      "info": "Se mere"
     },
     "rsvp": {
       "title": {
@@ -56,7 +57,13 @@
         "notes": {
           "placeholder": "Skriv allergier eller særlige hensyn ind her",
           "label": "Særlige hensyn"
-        }
+        },
+        "dietary": {
+          "vegan": "Veganer",
+          "vegetarian": "Vegetar",
+          "pescetarian": "Pescetar"
+        },
+        "plusOne": "Jeg ønsker at medbringe en +1"
       },
       "submit": "Send svar"
     },
@@ -66,36 +73,19 @@
       "topics": {
         "booking": {
           "title": "Overnatning",
-          "expanded": {
-            "line1": "Vi har lavet en aftale med Scheelsminde, hvor der kan bookes hotelværelser til en fordelagtigt pris.",
-            "line2": "Følgende rabatkode kan tages i brug for at sparer XX%: ",
-            "discountCode": "RUNIKO2026",
-            "line3": "Tryk på linket for at komme til Scheelsminde's hjemmeside."
-          }
+          "discountCode": "RUNIKO2026"
         },
         "wishlist": {
-          "title": "Ønskeliste",
-          "description": "Vi har samlet vores ønsker ét sted. Klik på skyen for at gå til vores ønskeliste på Ønskeskyen.",
-          "linkLabel": "Ønskeskyen"
+          "title": "Ønskeliste"
         },
         "route": {
-          "title": "Find vej & Parkering",
-          "path": {
-            "line1": "Vi har gjort det nemt for dig at finde vej. Tryk på et af de nedenstående links for at åbne Google Maps med den korrekte adresse."
-          },
-          "parking": {
-            "line1": "Vi gør opmærksom på, at vores bryllup afholdes på en dag med mange konfirmationer. Derfor kan der være rift om parkeringspladserne ved både kirken og feststedet. Vi anbefaler at komme i god tid.",
-            "line2": "Vi forventer dog, at der bliver flere ledige pladser i løbet af eftermiddagen, når konfirmationsgæsterne tager hjem."
-          }
+          "title": "Find vej & Parkering"
         },
         "toastmaster": {
           "title": "Kontakt toastmaster",
-          "description": "Har du et festligt indslag i ærmet, en sang du vil dele, eller måske en leg, der kan ryste os alle sammen? Så tøv ikke med at kontakte vores fantastiske toastmaster, Camilla. Hun sidder klar til at høre fra dig og hjælpe med at koordinere.",
-          "description2": "Du kan fange hende på mail, hvor I sammen kan aftale det videre forløb. Vi glæder os til at se, hvad I finder på! Og husk, det er helt frivilligt - vi presser ingen til at holde tale.",
           "contact": {
-            "name": "Camilla Wedenfelt",
-            "mail": "cwf@hotmail.com",
-            "facebook": "Idk"
+            "name": "Camilla Wedenfeld",
+            "mail": "cwf@hotmail.com"
           }
         },
         "timeline": {

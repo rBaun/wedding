@@ -20,6 +20,9 @@ export class LocationInfoComponent {
     })
   }
 
+  protected onChurchInfoClick = (): void => window.open('https://maps.app.goo.gl/vebjt14E8qsjBX5L6', '_blank')?.focus()
+  protected onHotelInfoClick = (): void => window.open('https://maps.app.goo.gl/Kq7xmj49Sg7R43Tz5', '_blank')?.focus();
+
   private getChurchInfo = (): VenueInfo => {
     const path = `pages.invite.invitations.church`;
 

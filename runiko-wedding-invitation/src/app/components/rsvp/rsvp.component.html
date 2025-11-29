@@ -22,7 +22,10 @@
 
     <div class="guest-cards">
       @for (guest of this.rsvpInfo.guests; track $index) {
-        <app-rsvp-card [guest]="guest"></app-rsvp-card>
+        <app-rsvp-card
+          [guest]="guest"
+          [allowPlusOne]="!!this.rsvpInfo.household.allowPlusOne"
+        ></app-rsvp-card>
       }
     </div>
 

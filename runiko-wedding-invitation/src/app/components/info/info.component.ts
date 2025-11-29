@@ -1,7 +1,7 @@
+import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 import { Component, inject } from '@angular/core';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { AccordionCardComponent } from "./accordion-card/accordion-card.component";
-import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-info',
@@ -16,5 +16,6 @@ export class InfoComponent {
   protected onCopyDiscountCode = () => {
     const discountCode = this.translocoService.translate('pages.info.topics.booking.expanded.discountCode');
     this.clipboard.copy(discountCode);
+    window.open('https://scheelsminde.dk/vaerelser/', '_blank')?.focus();
   }
 }

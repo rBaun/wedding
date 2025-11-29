@@ -14,6 +14,7 @@ import { LocationInfoComponent } from './location-info/location-info.component';
 export class InviteComponent implements OnInit {
   
   protected isInvited: boolean = false;
+  protected isRegistered: boolean = false;
 
   constructor(
     private router: Router,
@@ -22,6 +23,10 @@ export class InviteComponent implements OnInit {
 
   protected onRsvpButtonClick = (): void => {
     this.router.navigateByUrl('/rsvp');
+  }
+
+  protected onInfoButtonClick = (): void => {
+    this.router.navigateByUrl('/info');
   }
 
   ngOnInit(): void {
@@ -37,6 +42,7 @@ export class InviteComponent implements OnInit {
     }
 
     this.isInvited = !!invitationCode;
+    this.isRegistered = localStorage.getItem('hasRegistered') === 'true';
   }
 
 }
