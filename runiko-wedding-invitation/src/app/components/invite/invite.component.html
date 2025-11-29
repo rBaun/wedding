@@ -9,15 +9,15 @@
 
   @if (this.isInvited) {
     <div class="next-btn-wrapper">
-      @if (!this.isRegistered) {
-        <app-button-next
-          [label]="'pages.invite.rsvp' | transloco"
-          (click)="onRsvpButtonClick()"
-        ></app-button-next>
-      } @else {
+      @if (this.isRegistered) {
         <app-button-next
           [label]="'pages.invite.info' | transloco"
           (click)="onInfoButtonClick()"
+        ></app-button-next>
+      } @else {
+        <app-button-next
+          [label]="'pages.invite.rsvp' | transloco"
+          (click)="onRsvpButtonClick()"
         ></app-button-next>
       }
     </div>
