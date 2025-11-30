@@ -1,18 +1,59 @@
-# TODO efter funktionel implementering:
- - Update images
- - 
+# RunikoWeddingInvitation
 
-# TODO efter MVP implementering
- - Sørg for kun nogle personer kan se party/registration
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
 
-# Comments during dev
- - Hvorfor har vi Tilmelding knap i starten? Vi vil jo gerne vise dem invitationen. Jeg tror vi talte om det dengang, hvis folk gik ind flere gange. Men, jeg synes det nemmeste er at holde det simpelt ved at kontrollere flowet hele vejen igennem registreringen.
-   - Jeg tænker at efter en QR kode har været brugt og registreret, så viser vi de der genveje, så sådan noget som indslag, ønskeliste og så videre kan blive vist der. Ting, der kun er relevante for vores gæster
+## Development server
 
+To start a local development server, run:
 
+```bash
+ng serve
+```
 
-# FONTS
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-navn og dato:
-https://fonts.google.com/specimen/Quintessential?categoryFilters=Feeling:%2FExpressive%2FSophisticated
+## Code scaffolding
 
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
