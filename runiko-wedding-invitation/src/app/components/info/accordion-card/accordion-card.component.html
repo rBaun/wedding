@@ -1,0 +1,20 @@
+<div class="accordion-topic">
+  <div class="accordion-header" (click)="onAccordionClick()">
+    <h3 class="title">
+      {{ this.title }}
+    </h3>
+
+    @if (!this.expanded) {
+      <i class="fa-solid fa-angle-down"></i>
+    } @else {
+      <i class="fa-solid fa-angle-up"></i>
+    }
+  </div>
+
+  <div
+    class="accordion-content"
+    [style.display]="!this.expanded ? 'none' : 'block'"
+  >
+    <ng-content select="[accordion-content]"></ng-content>
+  </div>
+</div>

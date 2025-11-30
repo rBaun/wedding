@@ -1,0 +1,66 @@
+<div class="rsvp-card-container">
+  <div class="rsvp-card-header">
+    <h3 class="title">{{ this.guest.name }}</h3>
+    <label for="attendance" class="attendance-label">
+      <input
+        class="attendance"
+        type="checkbox"
+        name="attendance"
+        (change)="onAttendanceChange()"
+      />
+    </label>
+  </div>
+  @if (allowPlusOne) {
+    <div class="plus-one-section">
+      <label class="plus-one-checkbox">
+        <span>{{ "pages.rsvp.inputs.plusOne" | transloco }}</span>
+        <input
+          type="checkbox"
+          name="plusOne"
+          [checked]="guest.plusOne"
+          (change)="onPlusOneChange()"
+        />
+      </label>
+    </div>
+  }
+  <div class="dietary-preferences">
+    <div class="dietary-options">
+      <label class="dietary-checkbox">
+        <input
+          type="checkbox"
+          name="vegan"
+          [checked]="guest.dietaryPreference === 'vegan'"
+          (change)="onDietaryPreferenceChange('vegan')"
+        />
+        <span>{{ "pages.rsvp.inputs.dietary.vegan" | transloco }}</span>
+      </label>
+      <label class="dietary-checkbox">
+        <input
+          type="checkbox"
+          name="vegetarian"
+          [checked]="guest.dietaryPreference === 'vegetarian'"
+          (change)="onDietaryPreferenceChange('vegetarian')"
+        />
+        <span>{{ "pages.rsvp.inputs.dietary.vegetarian" | transloco }}</span>
+      </label>
+      <label class="dietary-checkbox">
+        <input
+          type="checkbox"
+          name="pescetarian"
+          [checked]="guest.dietaryPreference === 'pescetarian'"
+          (change)="onDietaryPreferenceChange('pescetarian')"
+        />
+        <span>{{ "pages.rsvp.inputs.dietary.pescetarian" | transloco }}</span>
+      </label>
+    </div>
+  </div>
+  <label for="notes" class="notes">
+    <p>{{ "pages.rsvp.inputs.notes.label" | transloco }}</p>
+    <textarea
+      name="notes"
+      id="notes"
+      [placeholder]="'pages.rsvp.inputs.notes.placeholder' | transloco"
+      (input)="onNotesChange($event)"
+    ></textarea>
+  </label>
+</div>

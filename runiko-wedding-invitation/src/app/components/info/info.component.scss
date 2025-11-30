@@ -1,0 +1,114 @@
+.info-container {
+
+  height: calc(100% - 96px);
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-white-dark);
+  // padding: .5rem 1rem;
+
+  .intro {
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .description {}
+  }
+
+  .topics {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    flex: 1;
+
+    padding: 1rem;
+    background-color: var(--color-white-dark);
+
+    .expanded-text {
+
+      .discount-percentage {
+        font-weight: bolder;
+        color: var(--color-green);
+      }
+    }
+
+    .copy-discount-code-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      padding: 1rem;
+
+      .discount-code {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        padding: .75rem;
+        background-color: var(--color-white-dark);
+        border: 1px dashed var(--color-green);
+        border-radius: 8px;
+
+        width: 75%;
+
+        .code {
+          font-weight: 500;
+          font-size: 1.5rem;
+          color: var(--color-green);
+        }
+
+        .copy-button {
+          background: none;
+          border: none;
+          cursor: pointer;
+
+          i {
+            font-size: 1.75rem;
+            color: var(--color-green);
+          }
+        }
+      }
+    }
+
+    .link-with-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: .5rem;
+
+      text-decoration: none;
+      color: black;
+
+      i {
+        color: var(--color-green);
+        font-size: 2rem;
+      }
+    }
+
+    .route-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0 0 2rem 0;
+    }
+
+    .parking-info {
+      font-size: .90rem;
+    }
+
+    .toastmaster-contact-info {
+      padding-top: 1rem;
+    }
+  }
+}

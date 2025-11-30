@@ -1,0 +1,41 @@
+<div class="rsvp-container">
+  @if (!this.rsvpInfo) {
+    <p>Der opstod en fejl! Prøv at scan QR koden igen</p>
+  }
+
+  @if (this.rsvpInfo) {
+    <h2 class="title">
+      {{
+        this.rsvpInfo.guests.length > 1
+          ? ("pages.rsvp.title.plural" | transloco)
+          : ("pages.rsvp.title.singular" | transloco)
+      }}
+    </h2>
+    <h3 class="subtitle">{{ "pages.rsvp.deadline" | transloco }}</h3>
+    <p class="description">
+      {{
+        this.rsvpInfo.guests.length > 1
+          ? ("pages.rsvp.description.plural" | transloco)
+          : ("pages.rsvp.description.singular" | transloco)
+      }}
+    </p>
+
+    <div class="guest-cards">
+      @for (guest of this.rsvpInfo.guests; track $index) {
+        <app-rsvp-card
+          [guest]="guest"
+          [allowPlusOne]="!!this.rsvpInfo.household.allowPlusOne"
+        ></app-rsvp-card>
+      }
+    </div>
+
+    <div class="button-container">
+      <app-button-back [navigateTo]="'/invite'"></app-button-back>
+      <app-button-next
+        class="submit-button"
+        [label]="'pages.rsvp.submit' | transloco"
+        (click)="onSubmitClick()"
+      ></app-button-next>
+    </div>
+  }
+</div>

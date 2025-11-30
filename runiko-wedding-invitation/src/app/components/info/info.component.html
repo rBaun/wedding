@@ -1,0 +1,120 @@
+<div class="info-container">
+  <div class="intro">
+    <h2 class="title">{{ "pages.info.title" | transloco }}</h2>
+    <p class="description">{{ "pages.info.description" | transloco }}</p>
+  </div>
+  <div class="topics">
+    <!-- Booking -->
+    <app-accordion-card [title]="'pages.info.topics.booking.title' | transloco">
+      <div accordion-content>
+        <p class="expanded-text">
+          Vi har lavet en aftale med Scheelsminde, hvor der kan bookes
+          hotelværelser med 15% rabat.
+          <br /><br />
+          Tryk på rabatkoden for at kopiere den og gå til booking siden.
+        </p>
+
+        <div class="copy-discount-code-wrapper">
+          <div class="discount-code" (click)="onCopyDiscountCode()">
+            <p class="code">
+              {{ "pages.info.topics.booking.discountCode" | transloco }}
+            </p>
+            <button class="copy-button">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </app-accordion-card>
+
+    <!-- Wishlist -->
+    <app-accordion-card
+      [title]="'pages.info.topics.wishlist.title' | transloco"
+    >
+      <div accordion-content>
+        <p class="expanded-text">
+          Vi har samlet vores ønsker på ønskeskyen.
+          <br />
+          <br />
+        </p>
+        <a class="link-with-icon" href="https://ønskeskyen.dk" target="_blank">
+          <i class="fa-solid fa-cloud"></i> Ønskeskyen
+        </a>
+      </div>
+    </app-accordion-card>
+
+    <!-- Route -->
+    <app-accordion-card [title]="'pages.info.topics.route.title' | transloco">
+      <div accordion-content>
+        <div class="route-links">
+          <a
+            class="link-with-icon"
+            href="https://maps.app.goo.gl/vebjt14E8qsjBX5L6"
+            target="_blank"
+          >
+            <i class="fa-solid fa-church"></i>
+            Saltum Kirke
+          </a>
+          <a
+            class="link-with-icon"
+            href="https://maps.app.goo.gl/Kq7xmj49Sg7R43Tz5"
+            target="_blank"
+          >
+            <i class="fa-solid fa-hotel"></i>
+            Scheelsminde Hotel
+          </a>
+        </div>
+        <p class="parking-info">
+          Vi gør opmærksom på at der holdes konfirmationer i de andre
+          selskabslokaler, der formentligt starter før receptionen.
+        </p>
+      </div>
+    </app-accordion-card>
+
+    <!-- Toastmaster -->
+    <app-accordion-card
+      [title]="'pages.info.topics.toastmaster.title' | transloco"
+    >
+      <div accordion-content>
+        <p class="expanded-text">
+          Har du et festligt indslag i ærmet, så sidder Camilla klar til at
+          koordinere.
+        </p>
+
+        <div class="toastmaster-contact-info">
+          <p>
+            <b>{{
+              "pages.info.topics.toastmaster.contact.name" | transloco
+            }}</b>
+          </p>
+          <p>
+            <a
+              class="link-with-icon"
+              href="mailto:{{
+                'pages.info.topics.toastmaster.contact.mail' | transloco
+              }}"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              {{ "pages.info.topics.toastmaster.contact.mail" | transloco }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </app-accordion-card>
+
+    <app-accordion-card
+      [title]="'pages.info.topics.timeline.title' | transloco"
+    >
+      <div accordion-content>
+        <a
+          class="link-with-icon"
+          href="assets/images/runiko-dagens-program.png"
+          download
+        >
+          <i class="fa-solid fa-download"></i>
+          Hent dagens program
+        </a>
+      </div>
+    </app-accordion-card>
+  </div>
+</div>

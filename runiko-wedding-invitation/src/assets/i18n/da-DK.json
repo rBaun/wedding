@@ -1,0 +1,97 @@
+{
+  "pages": {
+    "invite": {
+      "description": "Du er inviteret til vores bryllup – en dag fyldt med kærlighed, nærvær og fejring. Vi glæder os til at dele denne helt særlige dag med familie og venner.",
+      "invitations": {
+        "church": {
+          "label": "Vielsen",
+          "location": {
+            "name": "Saltum Kirke",
+            "address": "Tinghøjgade 83, 9493 Saltum"
+          },
+          "time": {
+            "arrival": {
+              "label": "Ankomst",
+              "start": "12:30"
+            },
+            "ceremony": {
+              "label": "Vielse",
+              "start": "13:00"
+            }
+          }
+        },
+        "hotel": {
+          "label": "Reception & Bryllupsfest",
+          "location": {
+            "name": "Scheelsminde Hotel",
+            "address": "Scheelsmindevej 35, 9000 Aalborg"
+          },
+          "time": {
+            "reception": {
+              "label": "Reception",
+              "start": "15:30",
+              "end": "17:30"
+            },
+            "party": {
+              "label": "Bryllupsfest",
+              "start": "17:30",
+              "end": "03:00"
+            }
+          }
+        }
+      },
+      "rsvp": "Tilmeld dig",
+      "info": "Se mere"
+    },
+    "rsvp": {
+      "title": {
+        "plural": "Fortæl os om I kommer",
+        "singular": "Fortæl os om du kommer"
+      },
+      "deadline": "S.U. 07.03.26",
+      "description": {
+        "plural": "Vi håber I vil fejre dagen sammen med os! Når først I har sendt jeres svar, så vil I ikke kunne se denne side igen.",
+        "singular": "Vi håber du vil fejre dagen sammen med os! Når først du har sendt dit svar, så vil du ikke kunne se denne side igen."
+      },
+      "inputs": {
+        "notes": {
+          "placeholder": "Skriv allergier eller særlige hensyn ind her",
+          "label": "Særlige hensyn"
+        },
+        "dietary": {
+          "vegan": "Veganer",
+          "vegetarian": "Vegetar",
+          "pescetarian": "Pescetar"
+        },
+        "plusOne": "Jeg ønsker at medbringe en +1"
+      },
+      "submit": "Send svar"
+    },
+    "info": {
+      "title": "Praktisk Information",
+      "description": "Vi har samlet lidt praktiske informationer her. Tryk på en sektion for at folde den ud og læse mere.",
+      "topics": {
+        "booking": {
+          "title": "Overnatning",
+          "discountCode": "RUNIKO2026"
+        },
+        "wishlist": {
+          "title": "Ønskeliste"
+        },
+        "route": {
+          "title": "Find vej & Parkering"
+        },
+        "toastmaster": {
+          "title": "Kontakt toastmaster",
+          "contact": {
+            "name": "Camilla Wedenfeld",
+            "mail": "cwf@hotmail.com"
+          }
+        },
+        "timeline": {
+          "title": "Dagens program"
+        }
+      }
+    }
+  }
+}

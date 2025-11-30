@@ -1,0 +1,8 @@
+{
+  "/api/sheets": {
+    "target": "https://script.google.com/macros/s/AKfycbyfH8-T1fTbFoLfpwq9TbjBx48-99x2I8d1Z0g5oVbHz21kFvcKHoQ_973QJmVn3uyG/exec",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api/sheets": "" }
+  }
+}

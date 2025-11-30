@@ -1,0 +1,7 @@
+<div
+  class="spinner-container"
+  [class.visible]="this.loadingService.$loading | async"
+  [class.hidden]="!(this.loadingService.$loading | async)"
+>
+  <div class="spinner"></div>
+</div>
