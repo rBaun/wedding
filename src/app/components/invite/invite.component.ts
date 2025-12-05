@@ -4,6 +4,7 @@ import { ButtonNextComponent } from '@components/shared/button-next/button-next.
 import { TranslocoModule } from '@jsverse/transloco';
 import { GoogleSheetsService } from '@services/google-sheets.service';
 import { HouseholdService } from '@services/household.service';
+import { map, switchMap } from 'rxjs';
 import { ImagePortraitComponent } from './image-portrait/image-portrait.component';
 import { LocationInfoComponent } from './location-info/location-info.component';
 
@@ -37,7 +38,6 @@ export class InviteComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.checkForInvitationCode(params);
-      this.checkForRegistration();
     });
   }
 
@@ -49,24 +49,45 @@ export class InviteComponent implements OnInit {
       localStorage.setItem('invitationCode', invitationCode);
     }
 
-    this.isInvited = !!invitationCode;
+    if (invitationCode) {
+      this.householdService.getHouseholdById(invitationCode).subscribe(res => {
+        this.isInvited = res.names.length > 0;
+        
+        if (this.isInvited) {
+          this.checkForRegistration(invitationCode);
+        }
+      })
+    }
+
   }
 
-  private checkForRegistration = (): void => {
-    if (!this.isInvited) return;
-    if (this.isRegistered) return;
-
+  private checkForRegistration = (invitationCode: string): void => {
     const isRegistered = localStorage.getItem('isRegistered') === 'true';
     if (isRegistered) {
       this.isRegistered = isRegistered;
       return;
     }
 
-    const names: string[] = this.householdService.getRsvpInfo()?.guests.map(guest => guest.name) ?? [];
-    this.googleService.read(names).subscribe(response => {
-      this.isRegistered = !!response.found;
-      localStorage.setItem('isRegistered', 'true');
-    })
+    this.householdService.getHouseholdById(invitationCode)
+      .pipe(
+        map(household => household.names),
+        switchMap(names => this.googleService.read(names))
+      )
+      .subscribe(response => {
+        if (!response.found || response.found.length === 0) {
+          this.isRegistered = false;
+          localStorage.removeItem('isRegistered');
+          return;
+        }
+
+        this.isRegistered = response.found.length > 0 && response.notFound?.length === 0;
+
+        if (this.isRegistered) {
+          localStorage.setItem('isRegistered', 'true');
+        } else {
+          localStorage.removeItem('isRegistered');
+        }
+      });
   }
 
 }

@@ -24,11 +24,13 @@ export class GoogleSheetsService {
 
   public write = (guests: RsvpGuest[]): Observable<GoogleWriteResponse> => {
     const url = '/api/sheets';
-    return this.http.post<GoogleWriteResponse>(url, { guests: guests });
+    return this.http.post<GoogleWriteResponse>(url, { guests }, { responseType: 'json'});
   }
 
   public read = (names: string[]): Observable<GoogleReadResponse> => {
     const url = `/api/sheets?names=${encodeURIComponent(names.join(','))}`;
-    return this.http.get<GoogleReadResponse>(url);
+    return this.http.get<GoogleReadResponse>(url, {
+      responseType: 'json'
+    });
   }
 }

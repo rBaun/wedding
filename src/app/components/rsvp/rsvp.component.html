@@ -1,9 +1,14 @@
 <div class="rsvp-container">
-  @if (!this.rsvpInfo) {
+  @if (!this.rsvpInfo && !(this.loading.$loading | async)) {
     <p>Der opstod en fejl! Prøv at scan QR koden igen</p>
   }
+  @if (this.alreadyRegistered) {
+    <p>Du er allerede tilmeldt!</p>
+  }
 
-  @if (this.rsvpInfo) {
+  @if (
+    this.rsvpInfo && !this.alreadyRegistered && !(this.loading.$loading | async)
+  ) {
     <h2 class="title">
       {{
         this.rsvpInfo.guests.length > 1

@@ -1,5 +1,7 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-secret-cache.ts
+
+# "backend"
+/functions
+.firebase
 
 # Compiled output
 /dist
@@ -42,3 +44,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+functions
+*.log
