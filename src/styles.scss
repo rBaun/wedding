@@ -23,11 +23,25 @@
 }
 
 html,
-body {
-  width: 100%;
-  height: 100%;
+body,
+app-root {
+  width: 100svw;
+  width: 100dvw;
+  height: 100svh;
+  height: 100dvh;
   margin: 0;
   padding: 0;
+  background: var(--color-white-dark);
+}
+
+/* Ensure top-level app container covers the "dynamic" viewport and uses safe area */
+app-root,
+body>.app,
+.page {
+  min-height: 100svh;
+  min-height: 100dvh;
+  background: var(--color-white-dark);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 @font-face {
