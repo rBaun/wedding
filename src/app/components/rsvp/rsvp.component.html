@@ -1,5 +1,5 @@
 <div class="rsvp-container">
-  @if (!this.rsvpInfo) {
+  @if (!this.rsvpInfo && !(this.loading.$loading | async)) {
     <p>Der opstod en fejl! Prøv at scan QR koden igen</p>
   }
 

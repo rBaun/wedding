@@ -44,7 +44,6 @@ export class LoadingService {
     this.loadingCount++;
     if (this.loadingCount === 1) {
       this.loading$.next(true);
-      console.log('Loading started', this.loadingCount);
     }
   };
 
@@ -52,7 +51,6 @@ export class LoadingService {
     this.loadingCount = Math.max(0, this.loadingCount - 1);
     if (this.loadingCount === 0) {
       this.loading$.next(false);
-      console.log('Loading stopped', this.loadingCount);
     }
   };
 }
