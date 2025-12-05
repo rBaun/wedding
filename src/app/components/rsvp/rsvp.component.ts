@@ -5,10 +5,11 @@ import { RsvpCardComponent } from '@components/rsvp/rsvp-card/rsvp-card.componen
 import { ButtonBackComponent } from "@components/shared/button-back/button-back.component";
 import { ButtonNextComponent } from '@components/shared/button-next/button-next.component';
 import { TranslocoModule } from '@jsverse/transloco';
-import { RsvpGuest, RsvpInfo } from '@models/rsvp-info.model';
+import { RsvpGuest, RsvpHousehold, RsvpInfo } from '@models/rsvp-info.model';
 import { GoogleSheetsService } from '@services/google-sheets.service';
 import { HouseholdService } from '@services/household.service';
 import { LoadingService } from '@services/loading.service';
+import { map, switchMap, tap } from 'rxjs';
 
 @Component({
   selector: 'app-rsvp',
@@ -19,6 +20,7 @@ import { LoadingService } from '@services/loading.service';
 export class RsvpComponent {
 
   protected rsvpInfo?: RsvpInfo;
+  protected alreadyRegistered: boolean = false;
 
   constructor(
     private householdService: HouseholdService,
@@ -28,12 +30,28 @@ export class RsvpComponent {
   ) {
     const invitationCode = localStorage.getItem('invitationCode');
     if (!invitationCode) return;
+    const isRegistered = localStorage.getItem('isRegistered') === 'true';
+    if (isRegistered) {
+      this.alreadyRegistered = true;
+      return;
+    }
 
-    this.householdService.getHouseholdById(invitationCode).subscribe(household => {
-      this.rsvpInfo = {
-        household: household,
-        guests: household.names.map(name => { return { name } as RsvpGuest }),
+    this.householdService.getHouseholdById(invitationCode)
+    .pipe(
+      tap(household => {
+        this.rsvpInfo = {
+          household: household,
+          guests: household.names.map(name => { return { name } as RsvpGuest }),
+        }
+      }),
+      map((household: RsvpHousehold) => household.names),
+      switchMap(names => this.googleSheets.read(names))
+    ).subscribe(response => {
+      if (response.found?.length === 0) {
+        return;
       }
+      this.alreadyRegistered = true;
+      localStorage.setItem('isRegistered', 'true');
     })
   }
 
