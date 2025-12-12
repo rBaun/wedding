@@ -31,4 +31,12 @@ export class RsvpCardComponent {
   protected onNotesChange(event: Event): void {
     this.guest.notes = (event.target as HTMLTextAreaElement).value;
   }
+
+  protected onDrinkPreferenceChange(preference: 'alcoholic' | 'non-alcoholic'): void {
+    if (this.guest.drinkPreference === preference) {
+      this.guest.drinkPreference = null;
+    } else {
+      this.guest.drinkPreference = preference;
+    }
+  }
 }
