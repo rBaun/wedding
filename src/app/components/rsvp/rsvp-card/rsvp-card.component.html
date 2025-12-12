@@ -54,6 +54,17 @@
       </label>
     </div>
   </div>
+  <div class="drink-preference">
+    <label class="drink-checkbox">
+      <input
+        type="checkbox"
+        name="nonAlcoholic"
+        [checked]="guest.drinkPreference === 'non-alcoholic'"
+        (change)="onDrinkPreferenceChange('non-alcoholic')"
+      />
+      <span>{{ "pages.rsvp.inputs.drink.nonAlcoholic" | transloco }}</span>
+    </label>
+  </div>
   <label for="notes" class="notes">
     <p>{{ "pages.rsvp.inputs.notes.label" | transloco }}</p>
     <textarea

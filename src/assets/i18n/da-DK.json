@@ -63,7 +63,10 @@
           "vegetarian": "Vegetar",
           "pescetarian": "Pescetar"
         },
-        "plusOne": "Jeg ønsker at medbringe en +1"
+        "plusOne": "Jeg ønsker at medbringe en +1",
+        "drink": {
+          "nonAlcoholic": "Jeg ønsker alkoholfri drikke til maden"
+        }
       },
       "submit": "Send svar"
     },
@@ -73,7 +76,7 @@
       "topics": {
         "booking": {
           "title": "Overnatning",
-          "discountCode": "RUNIKO2026"
+          "discountCode": "guestbryllup"
         },
         "wishlist": {
           "title": "Ønskeliste"
@@ -85,7 +88,7 @@
           "title": "Kontakt toastmaster",
           "contact": {
             "name": "Camilla Wedenfeld",
-            "mail": "cwf@hotmail.com"
+            "mail": "wedenfeld3@gmail.com"
           }
         },
         "timeline": {

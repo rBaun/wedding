@@ -14,5 +14,6 @@ export interface RsvpGuest {
   isAttending?: boolean;
   notes?: string;
   dietaryPreference?: 'vegan' | 'vegetarian' | 'pescetarian' | null;
+  drinkPreference?: 'alcoholic' | 'non-alcoholic' | null;
   plusOne?: boolean;
 }
