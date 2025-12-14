@@ -29,6 +29,7 @@
     flex-direction: column;
     gap: 1.25rem;
     flex: 1;
+    padding-bottom: 1rem;
   }
 
   .button-container {
@@ -36,6 +37,7 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    padding-bottom: 2rem;
 
     .submit-button {
       flex: 1;
