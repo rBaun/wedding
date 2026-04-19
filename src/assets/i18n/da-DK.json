@@ -93,6 +93,9 @@
         },
         "timeline": {
           "title": "Dagens program"
+        },
+        "table-plan": {
+          "title": "Bordplan"
         }
       }
     }
